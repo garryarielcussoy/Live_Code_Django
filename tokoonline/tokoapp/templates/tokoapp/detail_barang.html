@@ -1,0 +1,22 @@
+{% extends 'tokoapp/base.html' %}
+
+{% block title %}{{barang.nama_barang}}{% endblock %}
+
+{% block content %}
+<div class="container-fluid barang_page">
+    <div class="row">
+        <div class="col-4">
+            <div class="photo">
+                    <img src="{{barang.foto}}">
+            </div>
+            <p class="nama_barang">{{barang.nama_barang}}</p>
+            <p>Rp {{barang.harga}}</p>
+            <ul>
+                {% for desc in deskripsi %}
+                    <li>{{desc}}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
